@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - [Sohel] & [Saniya]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for the Off-White Aesthetic and Muslim Design */
+        :root {
+            --off-white: #fcfcf5; /* A very soft, warm off-white */
+            --border-color: #c7a77d; /* A soft, elegant gold/taupe color */
+            --text-color: #333333; /* Dark gray for high readability */
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Poppins', sans-serif;
+            --card-width: 400px; /* A good size for a digital card */
+        }
+
+        body {
+            background-color: #eaeaea; /* Light gray background for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: var(--body-font);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        /* --------------------------- */
+        /* 1. KEYFRAMES FOR ANIMATION */
+        /* --------------------------- */
+        
+        /* Fade in the entire card on load */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Subtle color pulse for key elements */
+        @keyframes colorPulse {
+            0% { color: var(--border-color); }
+            50% { color: #d6bfa3; } /* Slightly lighter/softer gold */
+            100% { color: var(--border-color); }
+        }
+
+        /* ----------------------- */
+        /* 2. CARD & GENERAL STYLES */
+        /* ----------------------- */
+        .invitation-card {
+            width: var(--card-width);
+            background-color: var(--off-white);
+            padding: 40px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            
+            /* Apply the Fade-In Animation */
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        
+        /* Islamic-inspired border and divider */
+        .invitation-card::before, .invitation-card::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--border-color);
+            opacity: 0.6; 
+            left: 0;
+        }
+        .invitation-card::before { top: 0; }
+        .invitation-card::after { bottom: 0; }
+        hr { border: 0; height: 1px; background-color: var(--border-color); width: 60%; margin: 25px auto; }
+
+
+        /* ---------------------- */
+        /* 3. TEXT STYLES & ANIMATION */
+        /* ---------------------- */
+        
+        /* Traditional Islamic Opening (Bismillah) */
+        .bismillah {
+            font-size: 1.5em;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 15px;
+            color: var(--border-color);
+            font-weight: bold;
+            animation: colorPulse 3s infinite alternate 0.5s; /* Apply pulse animation */
+        }
+
+        /* Main headings and names */
+        h1 {
+            font-family: var(--heading-font);
+            font-size: 2.2em;
+            color: var(--text-color);
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        /* Bride/Groom names with color pulse */
+        .names {
+            font-family: var(--heading-font);
+            font-size: 1.6em;
+            margin: 15px 0 25px 0;
+            font-style: italic;
+            color: var(--border-color);
+            animation: colorPulse 3s infinite alternate 1s; /* Apply pulse animation with a delay */
+        }
+        .names.ampersand {
+             font-size: 1.2em; 
+             margin: 5px 0; 
+             font-style: normal;
+        }
+
+        .event-details p {
+            font-size: 1.1em;
+            margin: 8px 0;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .event-details strong {
+            font-weight: 600;
+            color: var(--border-color);
+        }
+
+        /* Quranic verse with color pulse */
+        .quran-verse {
+            margin-top: 30px;
+            font-size: 0.9em;
+            font-style: italic;
+            color: #666;
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+            animation: colorPulse 3s infinite alternate 1.5s; /* Apply pulse animation with a longer delay */
+        }
+        .quran-verse p {
+            color: #666;
+        }
+        
+        /* Utility class for line breaks on mobile (optional) */
+        @media (max-width: 600px) {
+            .invitation-card {
+                width: 90%;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="invitation-card">
+    
+    <div class="bismillah">
+        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </div>
+    <p style="font-size: 0.9em; margin-top: -10px; margin-bottom: 30px;">
+        In the name of Allah, the Most Beneficent, the Most Merciful
+    </p>
+
+    <h1>The Nikah Invitation</h1>
+    
+    <p class="names">
+        The honour of your presence is requested at the Walima reception of
+    </p>
+    
+    <h1 style="color: var(--text-color);">[Sohel]</h1>
+    <div class="names ampersand">&</div>
+    <h1 style="color: var(--text-color);">[Saniya]</h1>
+
+    <hr>
+
+    <div class="event-details">
+        <p>On the blessed night of</p>
+        <p><strong>27th October 2025</strong></p>
+        <p>at <strong>7:00 PM</strong></p>
+        
+        <p style="margin-top: 20px;">Venue</p>
+        <p><strong>[Rathod lawn]</strong><br>
+        [katol road, Nagpur]</p>
+        
+        <div class="quran-verse">
+            <p>
+            "And of His signs is that He created for you from yourselves mates that you may find tranquillity in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought." <br> (Surah Ar-Rum, Verse 21)
+            </p>
+        </div>
+
+        <p style="font-size: 0.9em; margin-top: 25px; font-style: normal; font-weight: 400;">
+            *RSVP by [27 october 2025]*
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
